@@ -1,6 +1,7 @@
 import requests
 import csv
 import os
+import sqlite3
 
 os.makedirs("csv", exist_ok=True)
 
@@ -25,7 +26,6 @@ with open("pokemons.csv", "w", newline="") as csvfile:
     for p in pokemenoes:
         writer.writerow(p)
 
-import sqlite3
 con = sqlite3.connect('pokemons.db')
 cur = con.cursor()
 
